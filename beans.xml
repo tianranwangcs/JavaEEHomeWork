@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean id="Car" class="test.Car">
+        <property name="carId" value="001"/>
+        <property name="carColor" value="red"/>
+    </bean>
+
+    <bean id="Office" class="test.Office">
+        <property name="officeId" value="824"/>
+    </bean>
+
+    <bean id="Boss" class="test.Boss">
+        <constructor-arg ref="Car"/>
+        <property name="office" ref="Office"/>
+    </bean>
+</beans>
